@@ -80,6 +80,13 @@ void square_all_inplace(int *arr, int n) {
     }
 }
 
+// 10 
+void square_all_out_1(int *arr, int *out, int n) {
+    for (int x = 0; x < n; x++) {
+        out[x] = arr[x]*arr[x];
+    }
+}
+
 // main
 int main() {
     int one = incr(1);
