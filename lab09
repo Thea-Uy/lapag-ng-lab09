@@ -64,6 +64,22 @@ int sum2(int *arr, int a) {
     return ret;
 }
 
+// 8
+void sum3(int *arr, int a, int *out) {
+    *out = 0;
+
+    for (int x = 0; x < a; x++) {
+        *out += *(arr + x);
+    }
+}
+
+// 9
+void square_all_inplace(int *arr, int n) {
+    for (int x = 0; x < n; x++) {
+        arr[x] = arr[x]*arr[x];
+    }
+}
+
 // main
 int main() {
     int one = incr(1);
@@ -78,6 +94,10 @@ int main() {
     int arr[3] = {1, 2, 3};
     int six = sum1(arr, 3);
     int seven = sum2(arr, 3);
+    int eight;
+    sum3(arr, 3, &eight);
+    square_all_inplace(arr, 3);
+
 
     printf("1) %d\n", one);
     printf("2) %d\n", two);
@@ -86,6 +106,8 @@ int main() {
     printf("5) %d\n", five);
     printf("6) %d\n", six);
     printf("7) %d\n", seven);
- 
+    printf("8) %d\n", eight);
+    printf("9) %d, %d, %d\n", arr[0], arr[1], arr[2]);
+
     return 0;
 }
