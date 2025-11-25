@@ -53,6 +53,17 @@ int sum1(int *arr, int a) {
     return ret;
 }
 
+// 7
+int sum2(int *arr, int a) {
+    int ret = 0;
+
+    for (int x = 0; x < a; x++) {
+        ret += *(arr + x);
+    }
+
+    return ret;
+}
+
 // main
 int main() {
     int one = incr(1);
@@ -66,6 +77,7 @@ int main() {
     int five = sum_1_to_n(5);
     int arr[3] = {1, 2, 3};
     int six = sum1(arr, 3);
+    int seven = sum2(arr, 3);
 
     printf("1) %d\n", one);
     printf("2) %d\n", two);
@@ -73,6 +85,7 @@ int main() {
     printf("4) %c, %c, %c\n", four1, four2, four3);
     printf("5) %d\n", five);
     printf("6) %d\n", six);
+    printf("7) %d\n", seven);
  
     return 0;
 }
