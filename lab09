@@ -65,7 +65,7 @@ int sum2(int *arr, int a) {
 }
 
 // 8
-void sum3(int *arr, int a, int *out) {
+void sum3(int *arr, int *out, int a) {
     *out = 0;
 
     for (int x = 0; x < a; x++) {
@@ -104,6 +104,8 @@ int main() {
     int eight;
     sum3(arr, 3, &eight);
     square_all_inplace(arr, 3);
+    int out[3]; //double check
+    square_all_out_1(arr, out, 3); //double check
 
 
     printf("1) %d\n", one);
@@ -115,6 +117,7 @@ int main() {
     printf("7) %d\n", seven);
     printf("8) %d\n", eight);
     printf("9) %d, %d, %d\n", arr[0], arr[1], arr[2]);
+    printf("10) %d, %d, %d\n", out[0], out[1], out[2]); // double check
 
     return 0;
 }
