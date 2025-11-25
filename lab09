@@ -1,0 +1,12 @@
+// 1
+int incr(int x) {
+    return x + 1;
+}
+
+// 2
+int prod_of_squares(int a1, int b1) {
+    int a2 = a1;
+    int b2 = b1;
+
+    return a2 * b2;
+}
